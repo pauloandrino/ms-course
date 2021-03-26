@@ -1,4 +1,4 @@
-package com.pma.hrworker.resourcer;
+package com.pma.hrworker.resources;
 
 import com.pma.hrworker.entities.Worker;
 import com.pma.hrworker.repositories.WorkerRepository;
