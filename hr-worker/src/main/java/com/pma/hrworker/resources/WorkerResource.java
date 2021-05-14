@@ -21,9 +21,6 @@ import java.util.List;
 @RequestMapping("/workers")
 public class WorkerResource {
 
-    @Value("${test.config}")
-    private String testConfig;
-
     @Autowired
     private Environment env;
 
@@ -34,7 +31,6 @@ public class WorkerResource {
 
     @GetMapping(value = "/configs")
     public ResponseEntity<Void> getConfig() {
-        logger.info("CONFIG: " + testConfig);
         return ResponseEntity.noContent().build();
     }
 
@@ -47,12 +43,13 @@ public class WorkerResource {
     @GetMapping(value = "/{id}")
     public ResponseEntity<Worker> findById(@PathVariable Long id) {
 
-
+/*
         try {
             Thread.sleep(3000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+*/
 
 
         logger.info("PORT = " + env.getProperty("local.server.port"));
